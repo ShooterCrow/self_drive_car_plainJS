@@ -1,0 +1,10 @@
+body {
+    background-color: lightgrey;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+#myCanvas {
+    background-color: darkgray;
+}
