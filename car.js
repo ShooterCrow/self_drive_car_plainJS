@@ -5,16 +5,22 @@ class Car {
         this.width = width;
         this.height = height;
 
+        this.speed = 2
+        this.acceleration = .2
         this.controls = new Control();
     }
 
     update() {
         if (this.controls.forward) {
-            this.y = this.y - 2
+            this.speed = this.speed - this.acceleration
+            this.speed < -4 ? this.speed = -4 : null
         }
         if (this.controls.reverse) {
-            this.y += 2
+            this.speed+=this.acceleration
+            this.speed > 3 ? this.speed = 3 : null
+
         }
+        this.y = this.y +this.speed
     }
 
     draw(ctx) {
