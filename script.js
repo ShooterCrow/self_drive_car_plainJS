@@ -3,5 +3,47 @@ canvas.height = window.innerHeight;
 canvas.width = 200;
 
 const ctx = canvas.getContext("2d");
-const car = new Car(100,100,30,50)
-car.draw(ctx)
+const car = new Car(100, 100, 30, 50)
+
+animate();
+
+function animate() {
+    car.update();
+    car.draw(ctx);
+    // setInterval(() => {
+    //     animate()
+    // }, 500);
+    requestAnimationFrame(animate)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const ctx = canvas.getContext("2d");
+// const car = new Car(100,100,30,50)
+// car.draw(ctx)
+
+// animate()
+
+// function animate () {
+//     car.update()
+//     canvas.height = window.innerHeight;
+//     car.draw(ctx);
+//     requestAnimationFrame(animate)
+// }
